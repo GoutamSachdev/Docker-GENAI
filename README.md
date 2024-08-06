@@ -21,3 +21,14 @@ Navigate to the directory containing the `Dockerfile` and run the following comm
 
 ```sh
 docker build -t fastapi-transformers .
+This will start the FastAPI application on http://0.0.0.0:7860.
+
+Pushing to Hugging Face Spaces
+Create a new space on Hugging Face.
+Upload the app.py, Dockerfile, and requirements.txt files to the space.
+Hugging Face Spaces will automatically build and deploy your application.
+API Endpoints
+GET /: Returns a welcome message.
+GET /asking?text=<your_text>: Generates a text output based on the input text.
+curl -X GET "http://0.0.0.0:7860/asking?text=Hello"
+
